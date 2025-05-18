@@ -1,0 +1,133 @@
+/* Custom styles for YouTube Video Downloader */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+.card-header {
+    font-weight: 500;
+}
+
+.shadow {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Thumbnail image styling */
+#thumbnail {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+}
+
+/* Custom button styling */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-download {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-download:hover {
+    transform: translateY(-2px);
+}
+
+/* Format table styling */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Form elements */
+.form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Loading spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Adjust spacing for mobile */
+@media (max-width: 767.98px) {
+    #videoInfo .row {
+        flex-direction: column;
+    }
+    
+    #videoInfo .col-md-4 {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    #thumbnail {
+        border-radius: 10px 10px 0 0;
+        max-height: 200px;
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card-title {
+        margin-top: 0.5rem;
+    }
+}
+
+/* Animated effects */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn-primary:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+} 
